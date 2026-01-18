@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Louis G. Marfil | Portfolio</title>
+    <link href="style.css" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="toggle-container">
+        <button class="toggle-switch" onclick="toggleTheme()"><img src="icons/night-day.png" height="15" width="15"></button>
+    </div>
+
+    <div class="container">
+        <header>
+            <img src="paul.jpg" alt="Profile" class="profile-img">
+            <div class="header-content">
+                <div class="name-row">
+                    <h1>Paul Louis G. Marfil</h1>
+                </div>
+                <p class="location"><img src="icons/marker.png" height="12" width="12">Alangan, Sibalom Antique</p>
+                <p class="title">Bachelor of Science in Information Technology</p>
+                <div class="button-group">
+                    <a href="mailto:your-email@gmail.com" class="btn btn-secondary">✉ Send Email</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-grid">
+            <section class="card col-span-2">
+                <h2><img src="icons/about.png" height="20" width="20">About</h2>
+                <p style="color: var(--text-muted); line-height: 1.6;">
+                    I am a motivated and passionate college student with a strong interest in web and mobile application development. I enjoy creating clean, user-friendly designs and turning ideas into functional digital experiences. As a beginner in HTML, CSS, and mobile app development, I am continuously learning and improving my skills through hands-on projects and practice.
+                    I am eager to grow as a developer, explore new technologies, and collaborate with others to build meaningful and innovative applications. My goal is to develop solutions that are simple, effective, and visually appealing.
+                </p>
+            </section>
+
+            <aside class="card">
+                <h2> <img src="icons/link-alt.png" height="20" width="20"> Social Links</h2>
+                <a href="https://www.linkedin.com/login" class="list-item"><div><span><img src="icons/linkedin.png" height="20" width="20" alt=""></span> LinkedIn</div> <span>↗</span></a>
+                <a href="https://github.com/" class="list-item"><div><span> <img src="icons/github.png" height="20" width="20"></span> GitHub</div> <span>↗</span></a>
+                <a href="https://www.instagram.com/accounts/emailsignup/" class="list-item"><div><span><img src="icons/instagram.png" height="20" width="20"></span> Instagram</div> <span>↗</span></a>
+                <a href="https://www.facebook.com/poollowis" class="list-item"><div><span><img src="icons/facebook.png" height="20" width="20"></span> Facebook</div> <span>↗</span></a>
+            </aside>
+
+            <section class="card col-span-2">
+                <h2><img src="icons/briefcase.png" height="20" width="20">Experience</h2>
+                <div style="border-left: 2px solid var(--border); padding-left: 15px;">
+                    <p><strong>Self-Learning Projects</strong> <span style="float: right; font-size: 0.8rem;">2025</span></p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Created basic websites using HTML and CSS</p>
+                    <p><strong>Designed simple UI layout</strong> <span style="float: right; font-size: 0.8rem;">2025</span></p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">For mobile and web applications</p>
+                    <p><strong>Learned fundamentals of React Native</strong> <span style="float: right; font-size: 0.8rem;">2025</span></p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">mobile app navigation</p>
+                    <p><strong>Designed UI/UX prototypes</strong> <span style="float: right; font-size: 0.8rem;">2025</span></p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">For school and personal projects</p>
+                </div>
+            </section>
+
+            <aside class="card">
+                <h2> <img src="icons/cpu.png" height="20" width="20">Hobby Tech</h2>
+                <div class="speaking-box">
+                   UI/UX Prototyping: Using tools like Figma or Canva to design mobile app layouts before you even start coding them.
+                    <br><br>
+                    <a href="#" style="color: var(--text-main); font-weight: 600; text-decoration: none;">Get in touch ↗</a>
+                </div>
+            </aside>
+
+            <div class="card col-span-3 grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
+                <div class="list-item" style="margin-bottom: 0;">
+                    <div><span>✉</span> <strong>Email</strong><br><small>plgmarfil@antiquespride.edu.ph</small></div>
+                </div>
+                <div class="list-item" style="margin-bottom: 0;">
+                    <div><span><img src="icons/whatsapp.png" height="12" width="12"></span> <strong>Let's Talk</strong><br><small>Schedule a Chat</small></div>
+                    <span>↗</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const current = body.getAttribute('data-theme');
+            body.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+        }
+    </script>
+</body>
+</html>
