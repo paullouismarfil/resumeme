@@ -1,0 +1,114 @@
+
+        :root {
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-main: #111827;
+            --text-muted: #4b5563;
+            --border: #e5e7eb;
+            --accent: #000000;
+            --blue-accent: #2563eb;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #000000;
+            --card-bg: #111111;
+            --text-main: #ffffff;
+            --text-muted: #a1a1aa;
+            --border: #27272a;
+            --accent: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            padding: 40px 20px;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; }
+
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            align-items: flex-start;
+            margin-bottom: 32px;
+        }
+
+        .profile-img {
+            width: 150px; height: 150px;
+            border-radius: 12px; object-fit: cover;
+        }
+
+        .header-content { flex: 1; min-width: 300px; }
+        .name-row { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+        .location { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px; }
+        .title { font-size: 1.25rem; font-weight: 500; margin-bottom: 20px; }
+
+        /* Buttons */
+        .btn {
+            padding: 10px 20px; border-radius: 8px;
+            font-weight: 500; text-decoration: none;
+            display: inline-flex; align-items: center; gap: 8px;
+            font-size: 0.9rem; transition: 0.2s;
+        }
+        .btn-secondary { background: var(--card-bg); color: var(--text-main); border: 1px solid var(--border); }
+
+        /* Bento Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        /* Large card for About/Experience */
+        .col-span-2 { grid-column: span 2; }
+        .col-span-3 { grid-column: span 3; }
+
+        h2 { font-size: 1rem; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; color: var(--text-main); }
+
+        /* List Items (Socials/Contact) */
+        .list-item {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 12px; border: 1px solid var(--border);
+            border-radius: 12px; margin-bottom: 8px;
+            text-decoration: none; color: var(--text-main);
+            font-size: 0.9rem; transition: 0.2s;
+        }
+        .list-item:hover { background: var(--bg-color); }
+        .list-item div { display: flex; align-items: center; gap: 10px; }
+
+        .speaking-box {
+            background: var(--bg-color); padding: 16px; border-radius: 12px;
+            font-size: 0.9rem; color: var(--text-muted);
+        }
+
+        .toggle-container { position: absolute; top: 40px; right: 40px; }
+  .toggle-switch { cursor: pointer; border: 1px solid var(--border); background: var(--card-bg); padding: 5px 10px; border-radius: 20px; color: var(--text-main); }
+
+        @media (max-width: 768px) {
+            .main-grid { grid-template-columns: 1fr; }
+            .col-span-2, .col-span-3 { grid-column: span 1; }
+}
+        /* When in dark mode, make PNG icons white */
+[data-theme="dark"] .card img, 
+[data-theme="dark"] .list-item img,
+[data-theme="dark"] .location img,
+[data-theme="dark"] .toggle-switch img {
+    filter: invert(1) brightness(2);
+}
+
+/* Optional: Add a slight hover effect to the social link boxes */
+.list-item:hover {
+    background-color: var(--border);
+    transform: translateX(5px);
+}
